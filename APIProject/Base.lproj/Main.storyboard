@@ -1,24 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RcR-A4-EHy">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="APIProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9C-r7-NMk">
+                                <rect key="frame" x="35.666666666666657" y="190" width="322" height="259"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H74-9W-EON">
+                                <rect key="frame" x="0.0" y="59" width="393" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="dTS-fM-ouQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="H74-9W-EON" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Kr9-jj-n42"/>
+                            <constraint firstItem="z9C-r7-NMk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L7S-dC-1ha"/>
+                            <constraint firstItem="H74-9W-EON" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VUY-ly-vm0"/>
+                            <constraint firstItem="z9C-r7-NMk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.75" id="erF-yW-Pl1"/>
+                            <constraint firstItem="z9C-r7-NMk" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.819338" id="ifh-sN-rxK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H74-9W-EON" secondAttribute="trailing" id="tXY-1e-yQy"/>
+                            <constraint firstItem="z9C-r7-NMk" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.303991" id="v1A-md-osy"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="showLottery" destination="z9C-r7-NMk" id="Sr0-Wk-Re0"/>
+                        <outlet property="showPicker" destination="H74-9W-EON" id="Vtl-Ua-Shp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+        </scene>
+        <!--BeerAPI View Controller-->
+        <scene sceneID="0Mm-BE-5nl">
+            <objects>
+                <viewController id="RcR-A4-EHy" customClass="BeerAPIViewController" customModule="APIProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jgg-MW-tiv">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYl-zy-Igs">
+                                <rect key="frame" x="0.0" y="330.66666666666669" width="393" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1df-ti-tYa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0hu-fJ-suF">
+                                <rect key="frame" x="0.0" y="360.66666666666674" width="393" height="457.33333333333326"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mOO-x5-dba">
+                                <rect key="frame" x="0.0" y="58.999999999999986" width="393" height="255.66666666666663"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="baN-NV-onG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0hu-fJ-suF" firstAttribute="leading" secondItem="baN-NV-onG" secondAttribute="leading" id="5t2-Gz-OXc"/>
+                            <constraint firstItem="baN-NV-onG" firstAttribute="trailing" secondItem="0hu-fJ-suF" secondAttribute="trailing" id="7eF-ZI-VzC"/>
+                            <constraint firstItem="baN-NV-onG" firstAttribute="trailing" secondItem="mOO-x5-dba" secondAttribute="trailing" id="86B-kX-cyI"/>
+                            <constraint firstItem="mOO-x5-dba" firstAttribute="height" secondItem="Jgg-MW-tiv" secondAttribute="height" multiplier="0.3" id="K0N-eE-Rid"/>
+                            <constraint firstItem="sYl-zy-Igs" firstAttribute="top" secondItem="mOO-x5-dba" secondAttribute="bottom" constant="16" id="LIu-sA-F9m"/>
+                            <constraint firstItem="baN-NV-onG" firstAttribute="bottom" secondItem="0hu-fJ-suF" secondAttribute="bottom" id="PZL-qh-Kit"/>
+                            <constraint firstItem="0hu-fJ-suF" firstAttribute="top" secondItem="sYl-zy-Igs" secondAttribute="bottom" id="eMQ-Ju-8ZR"/>
+                            <constraint firstItem="baN-NV-onG" firstAttribute="trailing" secondItem="sYl-zy-Igs" secondAttribute="trailing" id="hgm-9E-nwK"/>
+                            <constraint firstItem="sYl-zy-Igs" firstAttribute="leading" secondItem="baN-NV-onG" secondAttribute="leading" id="uZy-Mi-lfR"/>
+                            <constraint firstItem="mOO-x5-dba" firstAttribute="top" secondItem="baN-NV-onG" secondAttribute="top" id="xhU-xG-4jQ"/>
+                            <constraint firstItem="mOO-x5-dba" firstAttribute="leading" secondItem="baN-NV-onG" secondAttribute="leading" id="zgU-cP-M5l"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="beerLabel" destination="sYl-zy-Igs" id="xj1-ZL-feT"/>
+                        <outlet property="beerTextView" destination="0hu-fJ-suF" id="QLn-gL-kV5"/>
+                        <outlet property="beerimage" destination="mOO-x5-dba" id="hbZ-lt-aIa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kYE-4K-dPq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1084.7328244274809" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
